@@ -26,7 +26,8 @@ const Hero = () => {
               <img 
                 src={profileImage} 
                 alt="Durai Murugan" 
-                className="relative w-40 h-40 rounded-full object-cover object-center border-4 border-primary shadow-glow scale-125"
+                className="relative w-40 h-40 rounded-full object-cover border-4 border-primary shadow-glow"
+                style={{ objectPosition: '50% 30%', transform: 'scale(1.15)' }}
               />
             </div>
           </div>

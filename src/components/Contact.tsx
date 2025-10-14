@@ -91,7 +91,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">LinkedIn</p>
-                    <p className="font-medium">durai-murugan-da</p>
+                    <p className="font-medium">linkedin.com/in/durai-murugan-da/</p>
                   </div>
                 </a>
 
@@ -106,7 +106,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">GitHub</p>
-                    <p className="font-medium">Durai-Murugan-DA</p>
+                    <p className="font-medium">github.com/Durai-Murugan-DA</p>
                   </div>
                 </a>
               </div>
