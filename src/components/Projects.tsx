@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 import { Link } from "react-router-dom";
+import employeeProductivityBanner from "@/assets/employee-productivity-banner.png";
+import itrShiftBanner from "@/assets/itr-shift-banner.png";
 
 const projects = [
   {
@@ -12,7 +14,9 @@ const projects = [
     impact: "Reduced reporting overhead, improved team visibility, enhanced decision-making for leadership",
     achievement: "Successfully deployed and adopted by multiple teams within the organization",
     tags: ["AI", "SAP BTP", "CAPM", "Knowledge Graphs", "Neo4j"],
-    gradient: "from-primary to-secondary"
+    gradient: "from-primary to-secondary",
+    image: employeeProductivityBanner,
+    githubUrl: "https://github.com/Durai-Murugan-DA/emp_productivity_app"
   },
   {
     id: "itr-shift",
@@ -23,7 +27,9 @@ const projects = [
     impact: "Dramatically reduced manual intervention, improved accuracy and traceability, accelerated integration timelines",
     achievement: "Reduced repetitive integration tasks by 40%, enabling team to focus on strategic work",
     tags: ["n8n", "AI", "Knowledge Graphs", "Workflow Automation", "Integration"],
-    gradient: "from-secondary to-accent"
+    gradient: "from-secondary to-accent",
+    image: itrShiftBanner,
+    githubUrl: "https://github.com/Durai-Murugan-DA/kg-injection-pipeline"
   }
 ];
 
@@ -48,10 +54,12 @@ const Projects = () => {
                 <div className="p-8">
                   <div className="flex flex-col md:flex-row gap-6">
                     {/* Project visual indicator */}
-                    <div className={`md:w-1/3 h-48 md:h-auto rounded-xl bg-gradient-to-br ${project.gradient} opacity-20 group-hover:opacity-30 transition-opacity flex items-center justify-center`}>
-                      <div className="text-6xl font-bold text-foreground/10">
-                        {index + 1}
-                      </div>
+                    <div className={`md:w-1/3 h-48 md:h-auto rounded-xl bg-gradient-to-br ${project.gradient} overflow-hidden relative group-hover:shadow-lg transition-all`}>
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-full object-cover opacity-90"
+                      />
                     </div>
 
                     {/* Project details */}
@@ -88,7 +96,7 @@ const Projects = () => {
                       </div>
 
                       {/* CTA */}
-                      <div className="pt-4">
+                      <div className="pt-4 flex gap-3">
                         <Button
                           asChild
                           variant="outline"
@@ -98,6 +106,21 @@ const Projects = () => {
                             View Case Study
                             <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                           </Link>
+                        </Button>
+                        <Button
+                          asChild
+                          variant="outline"
+                          size="icon"
+                          className="border-primary/50 hover:border-primary hover:bg-primary/10"
+                        >
+                          <a 
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="View GitHub Repository"
+                          >
+                            <Github className="h-4 w-4" />
+                          </a>
                         </Button>
                       </div>
                     </div>

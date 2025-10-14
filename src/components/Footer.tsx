@@ -12,31 +12,31 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex flex-col gap-3">
             <a
               href="https://github.com/Durai-Murugan-DA"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-card border border-border rounded-lg hover:border-primary hover:bg-primary/10 transition-all"
-              aria-label="GitHub"
+              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
             >
-              <Github className="w-5 h-5" />
+              <Github className="w-4 h-4" />
+              <span className="text-sm">github.com/Durai-Murugan-DA</span>
             </a>
             <a
               href="https://linkedin.com/in/durai-murugan-da"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-card border border-border rounded-lg hover:border-primary hover:bg-primary/10 transition-all"
-              aria-label="LinkedIn"
+              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
             >
-              <Linkedin className="w-5 h-5" />
+              <Linkedin className="w-4 h-4" />
+              <span className="text-sm">linkedin.com/in/durai-murugan-da/</span>
             </a>
             <a
               href="mailto:duraijeeva2017@gmail.com"
-              className="p-3 bg-card border border-border rounded-lg hover:border-primary hover:bg-primary/10 transition-all"
-              aria-label="Email"
+              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
             >
-              <Mail className="w-5 h-5" />
+              <Mail className="w-4 h-4" />
+              <span className="text-sm">duraijeeva2017@gmail.com</span>
             </a>
           </div>
         </div>
