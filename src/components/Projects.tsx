@@ -54,11 +54,11 @@ const Projects = () => {
                 <div className="p-8">
                   <div className="flex flex-col md:flex-row gap-6">
                     {/* Project visual indicator */}
-                    <div className={`md:w-1/3 h-48 md:h-auto rounded-xl bg-gradient-to-br ${project.gradient} overflow-hidden relative group-hover:shadow-lg transition-all`}>
+                    <div className={`md:w-1/3 h-64 rounded-xl bg-gradient-to-br ${project.gradient} overflow-hidden relative group-hover:shadow-lg transition-all`}>
                       <img 
                         src={project.image} 
                         alt={project.title}
-                        className="w-full h-full object-cover opacity-90"
+                        className="w-full h-full object-cover object-center opacity-90"
                       />
                     </div>
 
@@ -128,6 +128,21 @@ const Projects = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* More Projects Link */}
+          <div className="text-center mt-12">
+            <p className="text-sm text-muted-foreground">
+              For more projects and experiments, explore my{" "}
+              <a 
+                href="https://github.com/Durai-Murugan-DA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary/80 transition-colors font-medium inline-flex items-center gap-1"
+              >
+                GitHub → github.com/Durai-Murugan-DA
+              </a>
+            </p>
           </div>
         </div>
       </div>
