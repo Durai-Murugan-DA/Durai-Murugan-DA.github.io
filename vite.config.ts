@@ -8,8 +8,8 @@ export default defineConfig(() => ({
     host: "::",
     port: 8080,
   },
-  // Base path for GitHub Pages deployment under /Personal-Portfolio
-  base: "/Personal-Portfolio/",
+  // Base path for root GitHub Pages deployment
+  base: "/",
   plugins: [react()],
   resolve: {
     alias: {
